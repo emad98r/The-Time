@@ -1,0 +1,82 @@
+.section-4 {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  @include breakingPoint(medium) {
+    height: 80vh;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    @include breakingPoint(medium) {
+      height: 80vh;
+    }
+
+    #section4bg {
+      width: 100%;
+      position: absolute;
+      // transform: scale(1.5);
+      transition: 1s;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      z-index: -1;
+      @include breakingPoint(mobile) {
+        height: 100vh;
+      }
+      @include breakingPoint(small) {
+        height: 100vh;
+      }
+      @include breakingPoint(medium) {
+        height: 80vh;
+      }
+    }
+    .info {
+      width: 35%;
+      height: 100vh;
+      @include flex;
+      @include breakingPoint(mobile) {
+        width: 80%;
+        margin: 0 auto;
+      }
+      @include breakingPoint(small) {
+        width: 50%;
+      }
+      @include breakingPoint(medium) {
+        height: 80vh;
+      }
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: rgba(0, 0, 0, 0.288);
+      margin-right: 5em;
+      color: $white-color;
+      padding: 0 2.5em;
+      h1 {
+        margin-bottom: 1.5em;
+      }
+      p {
+        margin-bottom: 1.8em;
+        color: lighten($light-black-color, 50);
+        @include breakingPoint(mobile) {
+          padding: 0;
+          color: $white-color;
+        }
+        @include breakingPoint(small) {
+          padding: 0;
+          color: $white-color;
+        }
+      }
+      button {
+        border: 1px solid $gry-color;
+        img {
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}

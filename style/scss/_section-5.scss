@@ -1,0 +1,111 @@
+.section-5 {
+  width: 100%;
+  height: 100%;
+  .container {
+    width: 100%;
+    margin-top: 10em;
+    @include flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: $white-color;
+
+    .info {
+      width: 80%;
+      margin: 1.5em auto;
+      align-self: flex-start;
+      @include breakingPoint(mobile) {
+        width: 100%;
+        padding: 0 1em;
+      }
+      h1 {
+        font-size: 2.5em;
+        @include breakingPoint(mobile) {
+          font-size: 1.5em;
+        }
+      }
+      h5 {
+        font-weight: 500;
+        margin-bottom: 1em;
+      }
+    }
+    .cards {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 5em;
+      @include breakingPoint(large) {
+        flex-wrap: nowrap;
+      }
+      .card {
+        width: 100%;
+        height: 30em;
+        @include flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 2em;
+        padding: 0 0 3em;
+        cursor: pointer;
+        @include breakingPoint(mobile) {
+          width: 90%;
+          margin: 0 auto;
+          border-radius: 10px;
+        }
+        @include breakingPoint(small) {
+          width: 40%;
+          margin: 0 auto 1em;
+          border-radius: 10px;
+        }
+        @include breakingPoint(medium) {
+          width: 40%;
+          margin: 0 auto 1em;
+          border-radius: 10px;
+        }
+        &:hover {
+          a {
+            visibility: visible;
+          }
+        }
+        h5 {
+          font-weight: 700;
+          margin-bottom: 0.5em;
+        }
+        h1 {
+          font-weight: 500;
+          margin-bottom: 1em;
+        }
+        a {
+          color: $white-color;
+          font-size: 1.5em;
+          visibility: hidden;
+
+          &:hover {
+            color: greenyellow;
+          }
+        }
+        &:first-of-type {
+          background-image: linear-gradient(to top, #000000fd, transparent),
+            url("../../imgs/section\ 5\ photography.jpg");
+          background-size: cover;
+        }
+        &:nth-of-type(2) {
+          background-image: linear-gradient(to top, #000000fd, transparent),
+            url("../../imgs/section\ 5\ fashen.jpg");
+          background-size: cover;
+        }
+        &:nth-of-type(3) {
+          background-image: linear-gradient(to top, #000000fd, transparent),
+            url("../../imgs/section\ 5\ photography\ 3.jpg");
+          background-size: cover;
+        }
+        &:nth-of-type(4) {
+          background-image: linear-gradient(to top, #000000fd, transparent),
+            url("../../imgs/section\ 5\ fashion.jpg");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

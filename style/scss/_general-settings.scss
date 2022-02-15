@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
+}
+
+html {
+  scroll-behavior: smooth;
+  // scroll bar for firefox browser
+  scrollbar-color: $black-color $gry-color;
+  scrollbar-width: thin;
+}
+
+body {
+  background-color: $black-color;
+}
+
+h1 {
+  // big titles
+  font-size: 2em;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+h5 {
+  // small titles
+  font-size: 1.2em;
+  font-weight: 800;
+  line-height: 1.2;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+p {
+  line-height: 1.6;
+  font-weight: 500;
+  @include breakingPoint(mobile) {
+    width: 100%;
+    padding: 1em;
+  }
+  @include breakingPoint(small) {
+    width: 100%;
+    padding: 1em;
+  }
+}
+button {
+  background-color: transparent;
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+  width: 16em;
+  border: 1px solid $black-color;
+  border-radius: 40px;
+  font-size: 0.8em;
+  padding: 1em 1.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    background-color: $gry-color;
+    color: $light-black-color;
+  }
+  img {
+    width: 3em;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+// // ------------------
+// scroll bar for every browser
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: $black-color;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $gry-color;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

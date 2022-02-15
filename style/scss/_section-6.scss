@@ -1,0 +1,88 @@
+.section-6 {
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: 0.5s;
+  @include breakingPoint(mobile) {
+    height: 140vh;
+    justify-content: center;
+  }
+  .container {
+    width: 80%;
+    height: 100vh;
+    background-color: $light-black-color;
+    position: relative;
+    @include flex;
+    justify-content: flex-end;
+    transition: 0.5s;
+    @include breakingPoint(mobile) {
+      height: 140vh;
+      width: 85%;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+    @include breakingPoint(small) {
+      height: 100vh;
+    }
+    &::before {
+      content: "";
+      background-image: url("../../imgs/section\ 6.jpg");
+      background-size: cover;
+      width: 40%;
+      height: 90vh;
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      @include breakingPoint(mobile) {
+        height: 100%;
+        width: 100%;
+        transform: none;
+        position: relative;
+        background-position: center;
+        top: 0;
+        left: 0;
+      }
+      @include breakingPoint(small) {
+        width: 55%;
+      }
+    }
+    .info {
+      width: 45%;
+      text-align: left;
+      margin-right: 10em;
+      color: $white-color;
+      transition: 0.5s;
+      @include breakingPoint(mobile) {
+        width: 100%;
+        margin: 0;
+        padding: 1.5em 1em;
+        height: 100%;
+      }
+      @include breakingPoint(small) {
+        width: 55%;
+        margin: 0;
+        padding: 0 1em;
+      }
+      h1 {
+        margin-bottom: 1em;
+      }
+      h2 {
+        margin-bottom: 1em;
+        font-size: 1.2em;
+        line-height: 1.5;
+      }
+      p {
+        margin-bottom: 1em;
+        line-height: 1.7;
+        color: gray;
+      }
+      button {
+        color: gray;
+        border: 1px solid $white-color;
+      }
+    }
+  }
+}

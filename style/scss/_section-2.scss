@@ -1,0 +1,81 @@
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  @include flex;
+  flex-direction: row;
+  color: $white-color;
+  @include breakingPoint(mobile) {
+    flex-direction: column;
+    height: 100%;
+  }
+  @include breakingPoint(small) {
+    flex-direction: column;
+    height: 100%;
+  }
+  .info {
+    width: 30%;
+    margin-left: 12em;
+    @include breakingPoint(mobile) {
+      margin: 0;
+      width: 100%;
+      padding: 1em;
+    }
+    @include breakingPoint(small) {
+      margin: 0;
+      width: 80%;
+      padding: 1em;
+    }
+    @include breakingPoint(medium) {
+      margin-left: 2em;
+      width: 50%;
+    }
+    h1 {
+      margin-bottom: 1em;
+    }
+    p {
+      margin-bottom: 1em;
+      line-height: 1.9;
+    }
+    h2 {
+      margin-bottom: 1em;
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+    h5 {
+      margin-bottom: 1em;
+      font-size: 0.9em;
+    }
+    span {
+      font-size: 6em;
+      font-weight: 700;
+      position: relative;
+      &::after {
+        content: "YEARS OF DIGITAL EXPERIENCE";
+        position: absolute;
+        left: 120%;
+        top: 20%;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+  .bigImg {
+    width: 50%;
+    height: 80%;
+    background-color: lighten($light-black-color, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakingPoint(mobile) {
+      width: 100%;
+    }
+    @include breakingPoint(small) {
+      width: 100%;
+    }
+    img {
+      width: 80%;
+      transition: 1s;
+      transform: scale(0.2);
+    }
+  }
+}

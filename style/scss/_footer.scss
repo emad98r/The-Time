@@ -1,0 +1,188 @@
+footer {
+  width: 100%;
+  background-color: lighten($black-color, 5);
+  color: $white-color;
+
+  .company-info {
+    width: 80%;
+    margin: 0 auto;
+    @include flex;
+    align-items: flex-start;
+    padding: 3em 0 0;
+    @include breakingPoint(mobile) {
+      flex-direction: column;
+    }
+    @include breakingPoint(small) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include breakingPoint(medium) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .section-1-f {
+      width: 25%;
+      @include flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      @include breakingPoint(mobile) {
+        margin: 1em 0;
+        width: 100%;
+      }
+      @include breakingPoint(small) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      @include breakingPoint(medium) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      .logo {
+        width: 9em;
+        margin-bottom: 2em;
+      }
+      ul {
+        display: flex;
+        li {
+          margin: 0 0.5em;
+          img {
+            width: 1.5em;
+            opacity: 0.5;
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .section-2-f {
+      width: 25%;
+      @include flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      @include breakingPoint(mobile) {
+        margin: 1em 0;
+        width: 100%;
+      }
+      @include breakingPoint(small) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      @include breakingPoint(medium) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      h4 {
+        margin-bottom: 2em;
+        border-bottom: 1px solid $white-color;
+      }
+      ul {
+        li {
+          padding: 0.5em 0;
+          a {
+            color: $white-color;
+            letter-spacing: 1px;
+            opacity: 0.5;
+            text-align: left;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .section-3-f {
+      width: 25%;
+      @include flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      @include breakingPoint(mobile) {
+        margin: 1em 0;
+        width: 100%;
+      }
+      @include breakingPoint(small) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      @include breakingPoint(medium) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      h4 {
+        margin-bottom: 2em;
+        border-bottom: 1px solid $white-color;
+      }
+      ul {
+        li {
+          padding: 0.5em 0;
+          color: $white-color;
+          letter-spacing: 1px;
+          opacity: 0.5;
+          &:hover {
+            opacity: 1;
+            cursor: help;
+          }
+        }
+      }
+    }
+    .section-4-f {
+      width: 25%;
+      @include breakingPoint(mobile) {
+        margin: 1em 0;
+        width: 100%;
+      }
+      @include breakingPoint(small) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      @include breakingPoint(medium) {
+        margin: 1em 0;
+        width: 40%;
+      }
+      h4 {
+        margin-bottom: 2em;
+        border-bottom: 1px solid $white-color;
+        width: max-content;
+      }
+      p {
+        letter-spacing: 1px;
+        opacity: 0.5;
+        width: 90%;
+        @include breakingPoint(mobile) {
+          width: 100%;
+          padding: 0;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .myinfo {
+    width: 80%;
+    border-top: 1px solid $gry-color;
+    margin: 5em auto 0;
+    text-align: center;
+    padding: 2.5em 0;
+    h5 {
+      font-size: 1em;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $gry-color;
+      opacity: 1;
+    }
+    a {
+      color: $white-color;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
